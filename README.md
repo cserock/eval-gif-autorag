@@ -50,7 +50,8 @@ autorag evaluate --qa_data_path ./data/qa.parquet --corpus_data_path ./data/corp
 아래 명령을 실행하여 대시보드를 로드합니다. 대시보드를 통해 결과를 아주 쉽게 검토할 수 있습니다.
 
 ```bash
-autorag dashboard --trial_dir ./benchmark/0
+# Sample : benchmark #2
+autorag dashboard --trial_dir ./benchmark/2
 ```
 
 ### streamlit 실행
@@ -58,7 +59,8 @@ streamlit을 실행하여 직접 최적화된 RAG를 사용해 볼 수 있습니
 아래 명령을 실행하세요.
 
 ```bash
-autorag run_web --trial_path ./benchmark/0
+# Sample : benchmark #2
+autorag run_web --trial_path ./benchmark/2
 ```
 
 #### 이런 질문을 해보세요.
