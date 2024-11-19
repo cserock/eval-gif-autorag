@@ -42,9 +42,6 @@ python3 main.py --config ./config/tutorial_ko.yaml
 autorag evaluate --qa_data_path ./data/qa.parquet --corpus_data_path ./data/corpus.parquet \
   --config ./config/tutorial_ko.yaml --project_dir ./benchmark
 ```
-위 데이터셋 튜토리얼에서 제작한 데이터셋으로 실행하려면, 
-`corpus.parquet`을 `corpus_new.parquet`, `qa.parquet`을 `qa_new.parquet`으로 바꿔주세요.
-4. benchmark 폴더가 생성되면 거기서 결과를 확인할 수 있습니다.
 
 ### 대시보드 실행
 
