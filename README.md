@@ -1,5 +1,6 @@
 # ARPO-AutoRAG
 ARPO의 성능 평가를 위해 AutoRAG를 사용합니다.
+![AutoRAG](./data/autorag_intro.png)
 
 ## virtualenv를 통해 python 실행환경 설정  
 $ virtualenv .venv --python=python3.11.10
