@@ -1,0 +1,8 @@
+filename,module_name,module_params,execution_time,retrieval_f1,retrieval_ndcg,retrieval_map,is_best
+0.parquet,VectorDB,"{'top_k': 3, 'embedding_model': 'openai'}",0.04301575422286987,0.5,0.9630929753571458,0.95,True
+1.parquet,BM25,"{'top_k': 3, 'bm25_tokenizer': 'ko_kkma'}",0.013030600547790528,0.5,0.9630929753571458,0.95,False
+2.parquet,BM25,"{'top_k': 3, 'bm25_tokenizer': 'ko_kiwi'}",1.0737605571746827,0.5,0.9630929753571458,0.95,False
+3.parquet,BM25,"{'top_k': 3, 'bm25_tokenizer': 'ko_okt'}",0.002501261234283447,0.5,0.9630929753571458,0.95,False
+4.parquet,HybridRRF,"{'top_k': 3, 'weight': 4.0, 'target_modules': ('VectorDB', 'BM25'), 'target_module_params': ({'top_k': 3, 'embedding_model': 'openai'}, {'top_k': 3, 'bm25_tokenizer': 'ko_kkma'})}",0.0560463547706604,0.5,0.9630929753571458,0.95,False
+5.parquet,HybridCC,"{'top_k': 3, 'normalize_method': 'tmm', 'weight': 0.0, 'target_modules': ('VectorDB', 'BM25'), 'target_module_params': ({'top_k': 3, 'embedding_model': 'openai'}, {'top_k': 3, 'bm25_tokenizer': 'ko_kkma'})}",0.0560463547706604,0.5,0.9630929753571458,0.95,False
+6.parquet,HybridCC,"{'top_k': 3, 'normalize_method': 'mm', 'weight': 0.0, 'target_modules': ('VectorDB', 'BM25'), 'target_module_params': ({'top_k': 3, 'embedding_model': 'openai'}, {'top_k': 3, 'bm25_tokenizer': 'ko_kkma'})}",0.0560463547706604,0.5,0.9630929753571458,0.95,False

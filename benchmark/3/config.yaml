@@ -1,0 +1,44 @@
+node_lines:
+- node_line_name: retrieve_node_line
+  nodes:
+    - node_type: retrieval
+      strategy:
+        metrics: [retrieval_ndcg, retrieval_mrr, retrieval_map, retrieval_recall, retrieval_precision, retrieval_f1 ]
+      top_k: 4
+      modules:
+        - module_type: bm25
+          bm25_tokenizer: ko_kiwi
+        - module_type: vectordb
+          embedding_model: openai
+        - module_type: hybrid_rrf
+        - module_type: hybrid_cc
+          normalize_method: [ mm, tmm ]
+- node_line_name: post_retrieve_node_line
+  nodes:
+    - node_type: prompt_maker
+      strategy:
+        metrics:
+          - metric_name: rouge
+          - metric_name: sem_score
+            embedding_model: openai
+        generator_modules:
+          - module_type: openai_llm
+            llm: gpt-4o-mini
+      modules:
+        - module_type: fstring
+          prompt:
+          - |
+            You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question in Korean. If you don't know the answer, just say that 'NO'. Use three sentences maximum and keep the answer concise. \n\n # Question: {query} \n # Context: {retrieved_contents} \n # Answer: 
+    - node_type: generator
+      strategy:
+        metrics:
+          - metric_name: bleu
+          - metric_name: meteor
+          - metric_name: rouge
+          - metric_name: sem_score
+            embedding_model: openai
+      modules:
+        - module_type: openai_llm
+          llm: gpt-4o-mini
+          temperature: [ 0.0 ]
+          batch: 16

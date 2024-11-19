@@ -1,0 +1,4 @@
+filename,module_name,module_params,execution_time,average_output_token,bleu,meteor,rouge,sem_score,is_best
+0.parquet,OpenAILLM,"{'llm': 'gpt-4o-mini', 'temperature': 0.0, 'batch': 16}",0.4098636031150818,66.55,41.05956861839516,0.7464964351342768,0.8305859747407736,0.93827500634449,True
+1.parquet,OpenAILLM,"{'llm': 'gpt-4o-mini', 'temperature': 0.5, 'batch': 16}",0.4839787483215332,66.85,40.38158756301284,0.7476292783445475,0.8272288318836306,0.9404596515649853,False
+2.parquet,OpenAILLM,"{'llm': 'gpt-4o-mini', 'temperature': 0.1, 'batch': 16}",0.3149263024330139,68.25,41.014538808223925,0.7493174265005554,0.8280066096614085,0.9383395121857756,False

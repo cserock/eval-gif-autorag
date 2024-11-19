@@ -1,0 +1,4 @@
+node_line_name,node_type,best_module_filename,best_module_name,best_module_params,best_execution_time
+retrieve_node_line,retrieval,0.parquet,VectorDB,"{'top_k': 10, 'embedding_model': 'openai'}",1.6399341583251954
+post_retrieve_node_line,prompt_maker,1.parquet,Fstring,{'prompt': '단락을 읽고 질문에 답하세요. 답할때 단계별로 천천히 고심하여 답변하세요. 반드시 단락 내용을 기반으로 말하고 거짓을 말하지 마세요. \\n 질문: {query} \\n 단락: {retrieved_contents} \\n 답변 :\n'},0.0001466512680053
+post_retrieve_node_line,generator,0.parquet,OpenAILLM,"{'llm': 'gpt-4o-mini', 'temperature': 0.1, 'batch': 16}",0.254373300075531

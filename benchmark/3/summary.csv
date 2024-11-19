@@ -1,0 +1,4 @@
+node_line_name,node_type,best_module_filename,best_module_name,best_module_params,best_execution_time
+retrieve_node_line,retrieval,0.parquet,VectorDB,"{'top_k': 4, 'embedding_model': 'openai'}",0.0276084065437316
+post_retrieve_node_line,prompt_maker,0.parquet,Fstring,"{'prompt': ""You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question in Korean. If you don't know the answer, just say that 'NO'. Use three sentences maximum and keep the answer concise. \\n\\n # Question: {query} \\n # Context: {retrieved_contents} \\n # Answer: \n""}",0.0001568555831909
+post_retrieve_node_line,generator,0.parquet,OpenAILLM,"{'llm': 'gpt-4o-mini', 'temperature': 0.0, 'batch': 16}",0.204315447807312

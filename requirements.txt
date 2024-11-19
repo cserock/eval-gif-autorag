@@ -1,0 +1,7 @@
+AutoRAG[parse]>=0.3.2
+AutoRAG[gpu]
+kiwipiepy
+konlpy
+click
+python-dotenv
+spacy

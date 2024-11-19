@@ -1,0 +1,2 @@
+node_type,best_module_filename,best_module_name,best_module_params,best_execution_time
+retrieval,1.parquet,VectorDB,"{'top_k': 4, 'embedding_model': 'openai'}",0.0545703530311584

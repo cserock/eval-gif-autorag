@@ -1,0 +1,3 @@
+filename,module_name,module_params,execution_time,average_prompt_token,prompt_maker_rouge,prompt_maker_sem_score,is_best
+0.parquet,Fstring,{'prompt': '단락을 읽고 질문에 답하세요. \\n 질문 : {query} \\n 단락: {retrieved_contents} \\n 답변 :\n'},0.00013904571533203126,1358.05,0.8176618017997328,0.9454747508102056,True
+1.parquet,Fstring,{'prompt': '단락을 읽고 질문에 답하세요. 답할때 단계별로 천천히 고심하여 답변하세요. 반드시 단락 내용을 기반으로 말하고 거짓을 말하지 마세요. \\n 질문: {query} \\n 단락: {retrieved_contents} \\n 답변 :\n'},0.000156402587890625,1516.8,0.8176618017997328,0.9454377340214272,False
